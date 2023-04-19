@@ -36,7 +36,7 @@ data "vcd_nsxt_edgegateway" "t1" {
 # Org VDC Routed Network
 ######################### 
 
-module "vcd_network_routed_v2" {
+module "routed-segment" {
   source          = "github.com/global-vmware/vcd-network-routed-v2"
   vdc_edge_name   = "1338829-US1-18916d0c-4c6d-42c3-be95-b911ee2119fb-edge"
   vdc_org_name    = "1338829-us1-rsvc-developmentenvironment"
