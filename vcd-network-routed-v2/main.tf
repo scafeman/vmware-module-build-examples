@@ -36,20 +36,13 @@ data "vcd_nsxt_edgegateway" "t1" {
 # Org VDC Routed Network
 ######################### 
 
-module "segment" {
-  source = "github.com/global-vmware/vcd-network-routed-v2.git"
-  org             = var.vdc_org_name
-  name            = var.vcd_network_routed_segment_segment_name
-  edge_gateway_id = data.vcd_nsxt_edgegateway.t1.id
-
-  gateway         = var.vcd_network_routed_segment_segment_gateway
-  prefix_length   = var.vcd_network_routed_prefix_length_24
-  dns1            = var.vcd_network_routed_segment_dns1_server_address
-  dns2            = var.vcd_network_routed_segment_dns2_server_address
-  dns_suffix      = var.vcd_network_routed_segment_dns_suffix
-
-  static_ip_pool {
-    start_address = var.vcd_network_routed_segment_start_address
-    end_address   = var.vcd_network_routed_segment_end_address
-  }
+module "vcd_network_routed_v2" {
+  source          = "github.com/global-vmware/vcd-network-routed-v2"
+  vdc_edge_name   = "1338829-US1-18916d0c-4c6d-42c3-be95-b911ee2119fb-edge"
+  vdc_org_name    = "1338829-us1-rsvc-developmentenvironment"
+  vdc_group_name  = "1338829-us1-rsvc-developmentenvironment datacenter group"
+  vcd_network_routed_segment_segment_name = "Segment-01"
+  vcd_network_routed_segment_segment_gateway = "192.168.1.1"
+  vcd_network_routed_segment_start_address = "192.168.1.51"
+  vcd_network_routed_segment_end_address = "192.168.1.100"
 }
