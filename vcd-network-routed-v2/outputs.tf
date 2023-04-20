@@ -1,0 +1,27 @@
+output "network_name" {
+  value = "${module.org-vdc-routed-network.network_name}"
+}
+
+output "network_prefix_length" {
+  value = "${module.org-vdc-routed-network.network_prefix_length}"
+}
+
+output "network_dns1" {
+  value = "${module.org-vdc-routed-network.network_dns1}"
+}
+
+output "network_dns2" {
+  value = "${module.org-vdc-routed-network.network_dns2}"
+}
+
+output "network_dns_suffix" {
+  value = "${module.org-vdc-routed-network.network_dns_suffix}"
+}
+
+output "network_gateway" {
+  value = "${module.org-vdc-routed-network.network_gateway}"
+}
+
+output "network_static_ip_pool" {
+  value = "${module.org-vdc-routed-network.network_static_ip_pool}"
+}
