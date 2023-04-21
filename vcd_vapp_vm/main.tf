@@ -35,9 +35,10 @@ module "vapp_vm" {
   vm_computer_name_app_name         = "myapp"
   vm_computer_name_role             = "web"
   
-  vm_metadata_role                  = "Web Server"
-  vm_metadata_os                    = "Windows 2019"
-  vm_metadata_version               = "1.0"
   vm_metadata_cost_center           = "IT Department-1001"
+  vm_metadata_os                    = "Windows 2019"
+  vm_metadata_role                  = "Web Server"
+  vm_metadata_version               = "1.0"
+  
 }
 

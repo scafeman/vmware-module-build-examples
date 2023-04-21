@@ -23,7 +23,7 @@ module "org_vdc_routed_network" {
   segment_gateway     = "192.168.1.1"
   prefix_length       = "24"
 
-  start_address       = "192.168.1.51"
+  start_address       = "192.168.1.50"
   end_address         = "192.168.1.100"
   dns_suffix          = "mydomain.local"
 }
