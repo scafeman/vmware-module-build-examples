@@ -22,7 +22,8 @@ module "vapp_vm" {
   catalog_name                      = "1338829-US1-catalog"
   catalog_template_name             = "Windows Server 2019"
   vapp_org_network_name             = "US1-Segment-01"
-  network_cidr                      = "192.168.1.0/24" 
+  network_cidr                      = "192.168.1.0/24"
+  network_ip_allocation_mode        = "POOL"
 
   vm_count                          = 2
 
