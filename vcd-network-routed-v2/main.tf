@@ -26,7 +26,7 @@ module "org_vdc_routed_network" {
   start_address       = "192.168.1.51"
   end_address         = "192.168.1.100"
 
-  dns1_address        = "192.168.1.10"
-  dns2_address        = "192.168.1.11"
+  dns1_address        = "192.168.1.5"
+  dns2_address        = "192.168.1.6"
   dns_suffix          = "mydomain.local"
 }
