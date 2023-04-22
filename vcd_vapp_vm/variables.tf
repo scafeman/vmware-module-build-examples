@@ -36,3 +36,8 @@ variable "vdc_edge_name" {
   description = "Cloud Director Edge Name"
   default = "1338829-US1-18916d0c-4c6d-42c3-be95-b911ee2119fb-edge"
 }
+
+variable "admin_password" {
+  description = "VM Administrator Password"
+  default = ""
+}

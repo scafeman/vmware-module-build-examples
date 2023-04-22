@@ -13,17 +13,17 @@ terraform {
 ######################### 
 
 module "vapp_vm" {
-  source = "github.com/global-vmware/vcd_vapp_vm.git?ref=v1.1.0"
+  source                            = "github.com/global-vmware/vcd_vapp_vm.git?ref=v1.2.0"
   
   vdc_org_name                      = "1338829-us1-rsvc-developmentenvironment"
   vdc_group_name                    = "1338829-us1-rsvc-developmentenvironment datacenter group"
   vdc_name                          = "1338829-us1-default-primary-vdc"
   vcd_edge_name                     = "1338829-US1-18916d0c-4c6d-42c3-be95-b911ee2119fb-edge"
   catalog_name                      = "1338829-US1-catalog"
-  catalog_template_name             = "Windows Server 2019"
+  catalog_template_name             = "Ubuntu 22.04"
   vapp_org_network_name             = "US1-Segment-01"
   network_cidr                      = "192.168.1.0/24"
-  network_ip_allocation_mode        = "POOL"
+  network_ip_allocation_mode        = "MANUAL"
 
   vm_count                          = 2
 
@@ -36,9 +36,12 @@ module "vapp_vm" {
   vm_computer_name_role             = "web"
   
   vm_metadata_cost_center           = "IT Department-1001"
-  vm_metadata_os                    = "Windows 2019"
+  vm_metadata_os                    = "Ubuntu"
   vm_metadata_role                  = "Web Server"
   vm_metadata_version               = "1.0"
-  
+
+  vm_customization_force                  = "false"
+  vm_customization_auto_generate_password = "true"
+ 
 }
 
