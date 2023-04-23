@@ -13,7 +13,7 @@ terraform {
 ######################### 
 
 module "vapp_vm" {
-  source                            = "github.com/global-vmware/vcd_vapp_vm.git?ref=v1.2.0"
+  source                            = "github.com/global-vmware/vcd_vapp_vm.git?ref=v1.3.0"
   
   vdc_org_name                      = "1338829-us1-rsvc-developmentenvironment"
   vdc_group_name                    = "1338829-us1-rsvc-developmentenvironment datacenter group"
@@ -26,22 +26,27 @@ module "vapp_vm" {
   network_ip_allocation_mode        = "MANUAL"
 
   vm_count                          = 2
+  vm_sizing_policy_name             = "gp4.8"
 
-  vapp_name                         = "My Development Application"
-  vm_name_environment               = "Dev"
-  vm_app_name                       = "MyApp"
+  vapp_name                         = "Production BlazorApp vApp"
+  vm_name_environment               = "Prod"
+  vm_app_name                       = "BlazorApp"
   vm_app_role                       = "Web Server"
-  vm_computer_name_environment      = "dv"
-  vm_computer_name_app_name         = "myapp"
+  vm_computer_name_environment      = "pd"
+  vm_computer_name_app_name         = "ba"
   vm_computer_name_role             = "web"
   
-  vm_metadata_cost_center           = "IT Department-1001"
-  vm_metadata_os                    = "Ubuntu"
-  vm_metadata_role                  = "Web Server"
-  vm_metadata_version               = "1.0"
+  vm_metadata_key_01                = "Cost Center"
+  vm_metadata_value_01              = "IT Department-1001"
+  vm_metadata_key_02                = "Operating System"
+  vm_metadata_value_02              = "Ubuntu 22.04"  
+  vm_metadata_key_03                = "Role"
+  vm_metadata_value_03              = "Web Server"
+  vm_metadata_key_04                = "Version"
+  vm_metadata_value_04              = "v1.0"  
 
   vm_customization_force                  = "false"
   vm_customization_auto_generate_password = "true"
- 
+  
 }
 
