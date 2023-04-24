@@ -22,7 +22,7 @@ module "vapp_vm" {
   catalog_name                      = "1338829-US1-catalog"
   catalog_template_name             = "Ubuntu 22.04"
   vapp_org_network_name             = "US1-Segment-01"
-  network_cidr                      = "192.168.1.0/24"
+  network_cidr                      = "172.16.0.0/24"
   network_ip_allocation_mode        = "MANUAL"
 
   vm_count                          = 2
