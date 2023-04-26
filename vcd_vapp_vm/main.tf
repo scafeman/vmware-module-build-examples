@@ -26,14 +26,14 @@ module "vcd_vapp_vm" {
   network_ip_allocation_mode        = "MANUAL"
 
   vm_count                          = 2
-  vm_sizing_policy_name             = "gp2.4"
+  vm_sizing_policy_name             = "gp4.8"
 
-  vapp_name                         = "Production BlazorApp vApp"
+  vapp_name                         = "Production WordPress vApp"
   vm_name_environment               = "Prod"
-  vm_app_name                       = "BlazorApp"
+  vm_app_name                       = "WordPress"
   vm_app_role                       = "Web Server"
   vm_computer_name_environment      = "pd"
-  vm_computer_name_app_name         = "ba"
+  vm_computer_name_app_name         = "wp"
   vm_computer_name_role             = "web"
 
   vm_metadata_entries = [
@@ -52,6 +52,31 @@ module "vcd_vapp_vm" {
       is_system   = false
     },
     {
+      key         = "rackspace-addon-antivirus"
+      value       = "true"
+      type        = "MetadataStringValue"
+      user_access = "READWRITE"
+      is_system   = false
+    },
+    {
+      key         = "rackspace-addon-monitoring"
+      value       = "true"
+      type        = "MetadataStringValue"
+      user_access = "READWRITE"
+      is_system   = false
+    },{
+      key         = "rackspace-addon-osadmin"
+      value       = "true"
+      type        = "MetadataStringValue"
+      user_access = "READWRITE"
+      is_system   = false
+    },{
+      key         = "rackspace-addon-patching"
+      value       = "true"
+      type        = "MetadataStringValue"
+      user_access = "READWRITE"
+      is_system   = false
+    },{
       key         = "Role"
       value       = "Web Server"
       type        = "MetadataStringValue"
