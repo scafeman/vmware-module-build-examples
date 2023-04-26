@@ -7,7 +7,7 @@ This directory contains an example Terraform configuration that demonstrates how
 The Terraform configuration consists of four files:
 
 - `main.tf`: This file defines the `vcd_vapp_vm` module that creates a vApp and "X" Number of Virtual Machines.
-- `variables.tf`: This file defines the variables used in the `main.tf` file, such as the vCloud Director Connection and the VDC Organization Details.
+- `variables.tf`: This file defines the variables used in the `main.tf` file, such as the VCD Connection and the VDC Organization Details.
 - `outputs.tf`: This file defines an `output` block that outputs the Virtual Machine Names, IPs, Computer Names, Metadata Entries, and the VM Sizing Policy for the VMs. 
 - `providers.tf`: This file defines the `vcd` provider and specifies the connection details for VCD.
 
