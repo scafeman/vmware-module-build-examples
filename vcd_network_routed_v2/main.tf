@@ -23,47 +23,47 @@ module "org_vdc_routed_network" {
     US1-Segment-01 = {
       gateway       = "172.16.0.1"
       prefix_length = 24
-      start_address = "172.16.0.50"
-      end_address   = "172.16.0.100"
       dns1          = "192.168.255.228"
       dns2          = ""
       dns_suffix    = "mydomain.com"
+      start_address = "172.16.0.50"
+      end_address   = "172.16.0.100"      
     },
     US1-Segment-02 = {
       gateway       = "172.16.1.1"
       prefix_length = 24
-      start_address = "172.16.1.50"
-      end_address   = "172.16.1.100"
       dns1          = "192.168.255.228"
       dns2          = ""
       dns_suffix    = "mydomain.com"
+      start_address = "172.16.1.50"
+      end_address   = "172.16.1.100"      
     },
     US1-Segment-03 = {
       gateway       = "172.16.2.1"
       prefix_length = 24
-      start_address = "172.16.2.50"
-      end_address   = "172.16.2.100"
       dns1          = "192.168.255.228"
       dns2          = ""
       dns_suffix    = "mydomain.com"
+      start_address = "172.16.2.50"
+      end_address   = "172.16.2.100"      
     },
     US1-Segment-04 = {
       gateway       = "172.16.3.1"
       prefix_length = 24
-      start_address = "172.16.3.50"
-      end_address   = "172.16.3.100"
       dns1          = "192.168.255.228"
       dns2          = ""
       dns_suffix    = "mydomain.com"
+      start_address = "172.16.3.50"
+      end_address   = "172.16.3.100"      
     },
     US1-Segment-05 = {
       gateway       = "172.16.4.1"
       prefix_length = 24
-      start_address = "172.16.4.50"
-      end_address   = "172.16.4.100"
       dns1          = "192.168.255.228"
       dns2          = ""
       dns_suffix    = "mydomain.com"
+      start_address = "172.16.4.50"
+      end_address   = "172.16.4.100"      
     }
   }
 }
