@@ -6,8 +6,8 @@ This repository contains examples of how to use the `vcd` provider in Terraform 
 
 The repository contains two examples:
 
-- `vcd_network_routed_v2`: This example demonstrates how to use the `vcd_network_routed_v2` Module to create a routed v2 network in VMware Cloud Director Environments.
-- `vcd_vapp_vm`: This example demonstrates how to use the `vcd_vapp_vm` Module to create a vApp and Virtual Machines in VMware Cloud Director Environments.
+- `vcd_network_routed_v2`: This example demonstrates how to use the [vcd_network_routed_v2](https://github.com/scafeman/vmware-module-build-examples/tree/master/vcd_network_routed_v2) Terraform Module to Deploy Data Center Group Organization Networks into the Rackspace SDDC Flex VMware Cloud Director Platform.
+- `vcd_vapp_vm`: This example demonstrates how to use the [vcd_vapp_vm](https://github.com/global-vmware/vcd_vapp_vm) Terraform Module to deploy a Virtual Application and Virtual Machines into the Rackspace SDDC Flex VMware Cloud Director Platform.
 
 Each example contains a `README.md` file that provides an overview of the Terraform configuration and instructions for using the configuration to deploy the resources.
 
