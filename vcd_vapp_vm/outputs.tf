@@ -1,23 +1,21 @@
-output "vm_names" {
-  value = module.vcd_vapp_vm.vm_names
+output "web_vm_info" {
+  value = [
+    for vm in module.vcd_vapp_web_vm.vm_info : {
+      name              = vm.name
+      ip                = vm.ip
+      computer_name     = vm.computer_name
+      metadata_entries = { for entry in vm.metadata_entries : entry.key => entry.value }
+    }
+  ]
 }
 
-output "vm_ips" {
-  value = module.vcd_vapp_vm.vm_ips
-}
-
-output "vm_computer_names" {
-  value = module.vcd_vapp_vm.vm_computer_names
-}
-
-output "vm_metadata_entries" {
-  value = module.vcd_vapp_vm.vm_metadata_entries
-}
-
-output "vm_count" {
-  value = module.vcd_vapp_vm.vm_count
-}
-
-output "vm_sizing_policy_name" {
-  value = module.vcd_vapp_vm.vm_sizing_policy_name
+output "web_db_info" {
+  value = [
+    for vm in module.vcd_vapp_web_db.vm_info : {
+      name              = vm.name
+      ip                = vm.ip
+      computer_name     = vm.computer_name
+      metadata_entries = { for entry in vm.metadata_entries : entry.key => entry.value }
+    }
+  ]
 }

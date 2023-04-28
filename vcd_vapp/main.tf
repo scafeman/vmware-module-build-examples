@@ -15,8 +15,5 @@ module "vcd_vapp" {
   vdc_org_name        = "1338829-us1-rsvc-developmentenvironment"
   vdc_group_name      = "1338829-us1-rsvc-developmentenvironment datacenter group"
 
-  vapp_names = [
-    "My Prod vApp-01",
-    "My Prod vApp-02"
-  ]
+  vapp_names = ["Production WordPress vApp"]
 }
