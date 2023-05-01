@@ -81,7 +81,7 @@ module "vcd_vapp_web_vm" {
   
 }
 
-module "vcd_vapp_web_db" {
+module "vcd_vapp_db_vm" {
   source                            = "github.com/global-vmware/vcd_vapp_vm.git?ref=v1.5.0"
   
   vdc_org_name                      = "1338829-us1-rsvc-developmentenvironment"
