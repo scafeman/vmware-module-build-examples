@@ -2,7 +2,7 @@ terraform {
   required_providers {
     vcd = {
       source = "vmware/vcd"
-      version = "3.8.2"
+      version = "3.9.0"
     }
   }
 }
@@ -26,7 +26,7 @@ module "vcd_vapp_web_vm" {
   network_ip_allocation_mode        = "MANUAL"
   vm_ips                            = ["172.16.0.10", "172.16.0.11", "172.16.0.12","172.16.0.13", "172.16.0.14", "172.16.0.15"]
 
-  vm_count                          = 2
+  vm_count                          = 1
   vm_min_cpu                        = 4
   vm_sizing_policy_name             = "gp4.8"
   
@@ -95,7 +95,7 @@ module "vcd_vapp_db_vm" {
   network_ip_allocation_mode        = "MANUAL"
   vm_ips                            = ["172.16.1.10", "172.16.1.11", "172.16.1.12","172.16.1.13", "172.16.1.14", "172.16.1.15"]
 
-  vm_count                          = 2
+  vm_count                          = 1
   vm_min_cpu                        = 4
   vm_sizing_policy_name             = "gp8.16"
   
