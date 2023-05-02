@@ -19,7 +19,7 @@ module "vcd_nsxt_network_dhcp" {
   vdc_group_name            = "1338829-us1-rsvc-developmentenvironment datacenter group"
   vdc_edge_name             = "1338829-US1-18916d0c-4c6d-42c3-be95-b911ee2119fb-edge"
 
-  dhcp_mode                 = "NETWORK"
+  dhcp_mode                 = "EDGE"
 
   dns_servers               = ["192.168.255.228"]
 
