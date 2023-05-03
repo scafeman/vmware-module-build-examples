@@ -80,6 +80,10 @@ module "vcd_web_vm" {
   
 }
 
+##############################
+# VCD Virtual Machine Module #
+##############################
+
 module "vcd_db_vm" {
   source                            = "github.com/global-vmware/vcd_vm.git?ref=v1.1.0"
   

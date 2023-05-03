@@ -81,6 +81,10 @@ module "vcd_vapp_web_vm" {
   
 }
 
+######################
+# VCD vApp VM Module #
+######################
+
 module "vcd_vapp_db_vm" {
   source                            = "github.com/global-vmware/vcd_vapp_vm.git?ref=v1.5.0"
   
