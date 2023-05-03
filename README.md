@@ -1,15 +1,16 @@
 # VMware Module Build Examples
 
-This repository contains examples of how to use the `vcd` provider in Terraform to automate the deployment of Virtual Applications, Virtual Machines and Data Center Group Organization Networks into the Rackspace SDDC Flex VMware Cloud Director Platform.
+This repository contains examples of how to use Terraform Modules to automate the deployment of Virtual Applications, Virtual Machines, and Data Center Group Organization Networks into the Rackspace SDDC Flex VMware Cloud Director Platform.
 
 ## Overview
 
-The repository contains two examples:
+The repository contains five examples:
 
 - `vcd_network_routed_v2`: This example demonstrates how to use the [vcd_network_routed_v2](https://github.com/global-vmware/vcd_network_routed_v2) Terraform Module to Deploy Data Center Group Organization Networks into the Rackspace SDDC Flex VMware Cloud Director Platform.
 - `vcd_nsxt_network_dhcp`: This example demonstrates how to use the [vcd_nsxt_network_dhcp](https://github.com/global-vmware/vcd_nsxt_network_dhcp) Terraform Module to Deploy DHCP Pools for Routed Networks into the Rackspace SDDC Flex VMware Cloud Director Platform.
 - `vcd_vapp`: This example demonstrates how to use the [vcd_vapp](https://github.com/global-vmware/vcd_vapp) Terraform Module to deploy Virtual Applications into the Rackspace SDDC Flex VMware Cloud Director Platform.
 - `vcd_vapp_vm`: This example demonstrates how to use the [vcd_vapp_vm](https://github.com/global-vmware/vcd_vapp_vm) Terraform Module to deploy a Virtual Application and Virtual Machines into the Rackspace SDDC Flex VMware Cloud Director Platform.
+- `vcd_vm`: This example demonstrates how to use the [vcd_vapp_vm](https://github.com/global-vmware/vcd_vm) Terraform Module to deploy Virtual Machines into the Rackspace SDDC Flex VMware Cloud Director Platform.
 
 Each example contains a `README.md` file that provides an overview of the Terraform configuration and instructions for using the configuration to deploy the resources.
 
