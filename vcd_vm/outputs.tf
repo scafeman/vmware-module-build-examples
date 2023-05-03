@@ -22,7 +22,7 @@
 
 output "web_all_vm_info" {
   value = [
-    for vm in module.vcd_vapp_web_vm.all_vm_info : {
+    for vm in module.vcd_web_vm.all_vm_info : {
       name              = vm.name
       ip                = vm.ip
       computer_name     = vm.computer_name
@@ -34,7 +34,7 @@ output "web_all_vm_info" {
 
 output "db_all_vm_info" {
   value = [
-    for vm in module.vcd_vapp_db_vm.all_vm_info : {
+    for vm in module.vcd_db_vm.all_vm_info : {
       name              = vm.name
       ip                = vm.ip
       computer_name     = vm.computer_name
@@ -45,5 +45,5 @@ output "db_all_vm_info" {
 }
 
 output "vm_count" {
-  value = module.vcd_vapp_web_vm.vm_count + module.vcd_vapp_db_vm.vm_count
+  value = module.vcd_web_vm.vm_count + module.vcd_db_vm.vm_count
 }
