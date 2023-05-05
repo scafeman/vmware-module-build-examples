@@ -24,7 +24,7 @@ variable "vcd_pass" {
 }
 variable "vcd_url" {
   description = "Cloud Director URL"
-  default = "https://us1.rsvc.rackspace.com/api"
+  default = ""
 }
 variable "vcd_max_retry_timeout" {
   default = 90
