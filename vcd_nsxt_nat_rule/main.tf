@@ -27,13 +27,6 @@ module "vcd_nsxt_nat_rule" {
       internal_address        = "172.16.0.0/24"
       logging                 = false    
     },
-    "172.16.1.0/24_SNAT"    = {
-      rule_type               = "SNAT"
-      name                    = "172.16.1.0/24_SNAT"
-      external_address        = "204.232.237.141"
-      internal_address        = "172.16.1.0/24"
-      logging                 = false    
-    },
     "172.16.0.10_DNAT-HTTP" = {
       rule_type               = "DNAT"
       name                    = "172.16.0.10_DNAT-HTTP"
@@ -41,6 +34,13 @@ module "vcd_nsxt_nat_rule" {
       internal_address        = "172.16.0.10"
       dnat_external_port      = "80"
       logging                 = false
+    },
+    "172.16.1.0/24_SNAT"    = {
+      rule_type               = "SNAT"
+      name                    = "172.16.1.0/24_SNAT"
+      external_address        = "204.232.237.141"
+      internal_address        = "172.16.1.0/24"
+      logging                 = false    
     }
   }
 }
