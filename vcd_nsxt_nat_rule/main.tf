@@ -37,7 +37,7 @@ module "vcd_nsxt_nat_rule" {
     "172.16.0.10_DNAT-HTTP" = {
       rule_type               = "DNAT"
       name                    = "172.16.0.10_DNAT-HTTP"
-      external_address        = "204.232.237.142"
+      external_address        = "204.232.237.140"
       internal_address        = "172.16.0.10"
       dnat_external_port      = "80"
       logging                 = false
