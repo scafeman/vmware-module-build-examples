@@ -7,13 +7,17 @@ terraform {
   }
 }
 
+data "vcd_nsxt_app_port_profile" "HTTP" {
+  scope = "SYSTEM"
+  name = "HTTP"
+}
 
 ######################
 # VCD NSX-T NAT Rule #
 ######################
 
 module "vcd_nsxt_nat_rule" {
-  source                      = "github.com/global-vmware/vcd_nsxt_nat_rule.git?ref=v1.1.0"
+  source                      = "github.com/global-vmware/vcd_nsxt_nat_rule.git?ref=v1.2.0"
 
   vdc_org_name                = "1338829-us1-rsvc-developmentenvironment"
   vdc_group_name              = "1338829-us1-rsvc-developmentenvironment datacenter group"
@@ -32,7 +36,7 @@ module "vcd_nsxt_nat_rule" {
       name                    = "172.16.0.10_DNAT-HTTP"
       external_address        = "204.232.237.140"
       internal_address        = "172.16.0.10"
-      dnat_external_port      = "80"
+      app_port_profile_id     = data.vcd_nsxt_app_port_profile.HTTP.id
       logging                 = false
     },
     "172.16.1.0/24_SNAT"    = {
