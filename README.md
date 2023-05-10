@@ -1,6 +1,6 @@
 # VMware Module Build Examples
 
-This repository contains examples of how to use Terraform Modules to automate the deployment of Virtual Applications, Virtual Machines, and Data Center Group Organization Networks into the Rackspace SDDC Flex VMware Cloud Director Platform.
+This repository contains examples of how to use Terraform Modules to automate the deployment of Virtual Applications, Virtual Machines, NSX-T NAT Rules, Dynamic Security Groups and Data Center Group Organization Networks into the Rackspace SDDC Flex VMware Cloud Director Platform.
 
 ## Overview
 
