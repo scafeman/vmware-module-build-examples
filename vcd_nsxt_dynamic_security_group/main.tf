@@ -12,7 +12,7 @@ terraform {
 ###########################################
 
 module "vcd_nsxt_dynamic_security_group" {
-  source            = "github.com/global-vmware/vcd_nsxt_dynamic_security_group.git?ref=v1.0.0"
+  source            = "github.com/global-vmware/vcd_nsxt_dynamic_security_group.git?ref=v1.1.0"
 
   vdc_org_name      = "1338829-us1-rsvc-developmentenvironment"
   vdc_group_name    = "1338829-us1-rsvc-developmentenvironment datacenter group"
