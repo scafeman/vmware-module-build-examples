@@ -7,7 +7,7 @@ This repository contains examples of how to use Terraform Modules to automate th
 The repository contains seven examples:
 
 - `vcd_network_routed_v2`: This example demonstrates how to use the [vcd_network_routed_v2](https://github.com/global-vmware/vcd_network_routed_v2) Terraform Module to Deploy Data Center Group Organization Networks into the Rackspace SDDC Flex VMware Cloud Director Platform.
-- `vcd_nsxt_ip_set`: This example demonstrates how to use the [vcd_network_routed_v2](https://github.com/global-vmware/vcd_nsxt_ip_set) Terraform Module to Deploy NSX-T IP Sets into the Rackspace SDDC Flex VMware Cloud Director Platform.
+- `vcd_nsxt_ip_set`: This example demonstrates how to use the [vcd_nsxt_ip_set](https://github.com/global-vmware/vcd_nsxt_ip_set) Terraform Module to Deploy NSX-T IP Sets into the Rackspace SDDC Flex VMware Cloud Director Platform.
 - `vcd_nsxt_nat_rule`: This example demonstrates how to use the [vcd_nsxt_nat_rule](https://github.com/global-vmware/vcd_nsxt_nat_rule) Terraform Module to Deploy NSX-T NAT Rules into the Rackspace SDDC Flex VMware Cloud Director Platform.
 - `vcd_nsxt_network_dhcp`: This example demonstrates how to use the [vcd_nsxt_network_dhcp](https://github.com/global-vmware/vcd_nsxt_network_dhcp) Terraform Module to Deploy NSX-T DHCP Pools for Routed Networks into the Rackspace SDDC Flex VMware Cloud Director Platform.
 - `vcd_vapp`: This example demonstrates how to use the [vcd_vapp](https://github.com/global-vmware/vcd_vapp) Terraform Module to deploy Virtual Applications into the Rackspace SDDC Flex VMware Cloud Director Platform.
