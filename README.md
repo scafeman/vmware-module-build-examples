@@ -4,7 +4,7 @@ This repository contains examples of how to use Terraform Modules to automate th
 
 ## Overview
 
-The repository contains seven examples:
+The repository contains the following Build Examples:
 
 - `vcd_network_routed_v2`: This example demonstrates how to use the [vcd_network_routed_v2](https://github.com/global-vmware/vcd_network_routed_v2) Terraform Module to Deploy Data Center Group Organization Networks into the Rackspace SDDC Flex VMware Cloud Director Platform.
 - `vcd_nsxt_dynamic_security_group`: This example demonstrates how to use the [vcd_nsxt_dynamic_security_group](https://github.com/global-vmware/vcd_nsxt_dynamic_security_group) Terraform Module to Deploy NSX-T Dynamic Security Groups into the Rackspace SDDC Flex VMware Cloud Director Platform.
