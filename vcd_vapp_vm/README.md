@@ -28,6 +28,6 @@ To use this example Terraform configuration, follow these steps:
 
 If you have an example of how to use the `vcd_vapp_vm` module to create Virtual Applications and Virtual Machines in a different environment or with different settings, we welcome your contributions. Please fork this repository, create a new directory for your example, and submit a pull request.
 
-## License
+## Authors
 
-This directory is part of the VMware Module Build Examples repository, which is licensed under the MIT License. See the [LICENSE](../LICENSE) file for more information.
+This module is maintained by the [Global VMware Cloud Automation Services Team](https://github.com/global-vmware).
