@@ -26,7 +26,7 @@ To use this example Terraform configuration, follow these steps:
 
 ## Contributing
 
-If you have an example of how to use the `vcd` provider to create a network in a different environment or with different settings, we welcome your contributions. Please fork this repository, create a new directory for your example, and submit a pull request.
+If you have an example of how to use the `vcd_network_routed_v2` module to create Data Center Group Organization Networks in a different environment or with different settings, we welcome your contributions. Please fork this repository, create a new directory for your example, and submit a pull request.
 
 ## License
 

@@ -7,7 +7,7 @@ This directory contains an example Terraform configuration that demonstrates how
 The Terraform configuration consists of four files:
 
 - `main.tf`: This file defines the `vcd_vapp` module that creates the vApp.
-- `variables.tf`: This file defines the variables used in the `main.tf` file, such as the vApp Names, VCD Connection and the VDC Organization Details.
+- `variables.tf`: This file defines the variables used in the `main.tf` file, such as the VDC Organization Details.
 - `outputs.tf`: This file defines an `output` block that outputs the list of vApps that were deployed.
 - `providers.tf`: This file defines the `vcd` provider and specifies the connection details for VMware Cloud Director.
 
@@ -26,7 +26,7 @@ To use this example Terraform configuration, follow these steps:
 
 ## Contributing
 
-If you have an example of how to use the `vcd` provider to create a different type of resource or with different settings, we welcome your contributions. Please fork this repository, create a new directory for your example, and submit a pull request.
+If you have an example of how to use the `vcd_vapp` module to create Virtual Applications in a different environment or with different settings, we welcome your contributions. Please fork this repository, create a new directory for your example, and submit a pull request.
 
 ## License
 
