@@ -1,6 +1,6 @@
 # VMware Cloud Director vApp Terraform Build Example
 
-This directory contains an example Terraform configuration that demonstrates how to use the [vcd_vapp](https://github.com/global-vmware/vcd_vapp) Terraform Module to deploy vApps in the VMware Cloud Director Platform.
+This directory contains an example Terraform configuration that demonstrates how to use the [vcd_vapp](https://github.com/global-vmware/vcd_vapp) Terraform Module to deploy vApps into the [Rackspace SDDC Flex](https://www.rackspace.com/cloud/private/software-defined-data-center-flex) VMware Cloud Director Platform.
 
 ## Overview
 

@@ -1,6 +1,6 @@
 # VMware Cloud Director Routed v2 Network Terraform Build Example Example
 
-This directory contains an example Terraform configuration that demonstrates how to use the [vcd_network_routed_v2](https://github.com/global-vmware/vcd_network_routed_v2) Terraform Module to deploy Data Center Group Organization Networks into the Rackspace SDDC Flex VMware Cloud Director Platform.
+This directory contains an example Terraform configuration that demonstrates how to use the [vcd_network_routed_v2](https://github.com/global-vmware/vcd_network_routed_v2) Terraform Module to deploy Data Center Group Organization Networks into the [Rackspace SDDC Flex](https://www.rackspace.com/cloud/private/software-defined-data-center-flex) VMware Cloud Director Platform.
 
 ## Overview
 

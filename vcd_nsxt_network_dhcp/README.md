@@ -1,6 +1,6 @@
 # VMware Cloud Director DHCP Terraform Module for Routed Data Center Group Networks Build Example
 
-This directory contains an example Terraform configuration that demonstrates how to use the [vcd_nsxt_network_dhcp](https://github.com/global-vmware/vcd_nsxt_network_dhcp) Terraform Module to deploy DHCP pools into existing Data Center Group Routed Networks on the VMware Cloud Director Platform.
+This directory contains an example Terraform configuration that demonstrates how to use the [vcd_nsxt_network_dhcp](https://github.com/global-vmware/vcd_nsxt_network_dhcp) Terraform Module to deploy DHCP Pools into Data Center Group Routed Networks on the [Rackspace SDDC Flex](https://www.rackspace.com/cloud/private/software-defined-data-center-flex) VMware Cloud Director Platform.
 
 ## Overview
 
