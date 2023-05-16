@@ -2,15 +2,15 @@ terraform {
   required_providers {
     vcd = {
       source = "vmware/vcd"
-      version = "3.9.0"
+      version = "~> 3.8"
     }
   }
 }
 
 
-##############################
-# VCD Virtual Machine Module #
-##############################
+#####################################
+# Web Server Virtual Machine Module #
+#####################################
 
 module "vcd_web_vm" {
   source                            = "github.com/global-vmware/vcd_vm.git?ref=v1.1.0"
@@ -26,15 +26,15 @@ module "vcd_web_vm" {
   network_ip_allocation_mode        = "MANUAL"
   vm_ips                            = ["172.16.0.10", "172.16.0.11", "172.16.0.12","172.16.0.13", "172.16.0.14", "172.16.0.15"]
 
-  vm_count                          = 1
+  vm_count                          = 2
   vm_min_cpu                        = 4
   vm_sizing_policy_name             = "gp4.8"
   
   vm_name_environment               = "Prod"
-  vm_app_name                       = "WordPress"
+  vm_app_name                       = "App"
   vm_app_role                       = "Web"
   vm_computer_name_environment      = "pd"
-  vm_computer_name_app_name         = "wp"
+  vm_computer_name_app_name         = "app"
   vm_computer_name_role             = "web"
 
   vm_metadata_entries = [
@@ -80,9 +80,9 @@ module "vcd_web_vm" {
   
 }
 
-##############################
-# VCD Virtual Machine Module #
-##############################
+##########################################
+# Database Server Virtual Machine Module #
+##########################################
 
 module "vcd_db_vm" {
   source                            = "github.com/global-vmware/vcd_vm.git?ref=v1.1.0"
@@ -98,15 +98,15 @@ module "vcd_db_vm" {
   network_ip_allocation_mode        = "MANUAL"
   vm_ips                            = ["172.16.1.10", "172.16.1.11", "172.16.1.12","172.16.1.13", "172.16.1.14", "172.16.1.15"]
 
-  vm_count                          = 1
+  vm_count                          = 2
   vm_min_cpu                        = 4
   vm_sizing_policy_name             = "gp4.8"
   
   vm_name_environment               = "Prod"
-  vm_app_name                       = "WordPress"
+  vm_app_name                       = "App"
   vm_app_role                       = "DB"
   vm_computer_name_environment      = "pd"
-  vm_computer_name_app_name         = "wp"
+  vm_computer_name_app_name         = "app"
   vm_computer_name_role             = "db"
 
   vm_metadata_entries = [
