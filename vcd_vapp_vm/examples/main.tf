@@ -2,18 +2,18 @@ terraform {
   required_providers {
     vcd = {
       source = "vmware/vcd"
-      version = "~> 3.8"
+      version = "3.9.0"
     }
   }
 }
 
 
-#####################################
-# Web Server Virtual Machine Module #
-#####################################
+######################
+# VCD vApp VM Module #
+######################
 
-module "vcd_web_vm" {
-  source                            = "github.com/global-vmware/vcd_vm.git?ref=v1.1.0"
+module "vcd_vapp_web_vm" {
+  source                            = "github.com/global-vmware/vcd_vapp_vm.git?ref=v1.5.0"
   
   vdc_org_name                      = "1338829-us1-rsvc-developmentenvironment"
   vdc_group_name                    = "1338829-us1-rsvc-developmentenvironment datacenter group"
@@ -21,20 +21,21 @@ module "vcd_web_vm" {
   vdc_edge_name                     = "1338829-US1-18916d0c-4c6d-42c3-be95-b911ee2119fb-edge"
   catalog_name                      = "1338829-US1-catalog"
   catalog_template_name             = "Ubuntu 22.04"
-  org_network_name                  = "US1-Segment-01"
+  vapp_org_network_name             = "US1-Segment-01"
   network_cidr                      = "172.16.0.0/24"
-  network_ip_allocation_mode        = "POOL"
+  network_ip_allocation_mode        = "MANUAL"
   vm_ips                            = ["172.16.0.10", "172.16.0.11", "172.16.0.12","172.16.0.13", "172.16.0.14", "172.16.0.15"]
 
-  vm_count                          = 20
+  vm_count                          = 1
   vm_min_cpu                        = 4
   vm_sizing_policy_name             = "gp4.8"
   
+  vapp_name                         = "Production Application vApp"
   vm_name_environment               = "Prod"
-  vm_app_name                       = "App"
+  vm_app_name                       = "WordPress"
   vm_app_role                       = "Web"
   vm_computer_name_environment      = "pd"
-  vm_computer_name_app_name         = "app"
+  vm_computer_name_app_name         = "wp"
   vm_computer_name_role             = "web"
 
   vm_metadata_entries = [
@@ -80,12 +81,12 @@ module "vcd_web_vm" {
   
 }
 
-##########################################
-# Database Server Virtual Machine Module #
-##########################################
+######################
+# VCD vApp VM Module #
+######################
 
-module "vcd_db_vm" {
-  source                            = "github.com/global-vmware/vcd_vm.git?ref=v1.1.0"
+module "vcd_vapp_db_vm" {
+  source                            = "github.com/global-vmware/vcd_vapp_vm.git?ref=v1.5.0"
   
   vdc_org_name                      = "1338829-us1-rsvc-developmentenvironment"
   vdc_group_name                    = "1338829-us1-rsvc-developmentenvironment datacenter group"
@@ -93,20 +94,21 @@ module "vcd_db_vm" {
   vdc_edge_name                     = "1338829-US1-18916d0c-4c6d-42c3-be95-b911ee2119fb-edge"
   catalog_name                      = "1338829-US1-catalog"
   catalog_template_name             = "Ubuntu 22.04"
-  org_network_name                  = "US1-Segment-02"
+  vapp_org_network_name             = "US1-Segment-02"
   network_cidr                      = "172.16.1.0/24"
-  network_ip_allocation_mode        = "POOL"
+  network_ip_allocation_mode        = "MANUAL"
   vm_ips                            = ["172.16.1.10", "172.16.1.11", "172.16.1.12","172.16.1.13", "172.16.1.14", "172.16.1.15"]
 
-  vm_count                          = 20
+  vm_count                          = 1
   vm_min_cpu                        = 4
-  vm_sizing_policy_name             = "gp4.8"
+  vm_sizing_policy_name             = "gp8.16"
   
+  vapp_name                         = "Production Application vApp"
   vm_name_environment               = "Prod"
-  vm_app_name                       = "App"
+  vm_app_name                       = "WordPress"
   vm_app_role                       = "DB"
   vm_computer_name_environment      = "pd"
-  vm_computer_name_app_name         = "app"
+  vm_computer_name_app_name         = "wp"
   vm_computer_name_role             = "db"
 
   vm_metadata_entries = [

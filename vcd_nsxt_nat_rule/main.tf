@@ -22,6 +22,7 @@ module "vcd_nsxt_nat_rule" {
     "172.16.0.0/24_SNAT"    = {
       rule_type               = "SNAT"
       name                    = "172.16.0.0/24_SNAT"
+      description             = "SNAT Rule for the US1-Segment-01"
       external_address        = "204.232.237.140"
       internal_address        = "172.16.0.0/24"
     },
@@ -42,6 +43,7 @@ module "vcd_nsxt_nat_rule" {
     "172.16.1.0/24_SNAT"    = {
       rule_type               = "SNAT"
       name                    = "172.16.1.0/24_SNAT"
+      description             = "SNAT Rule for the US1-Segment-02"
       external_address        = "204.232.237.141"
       internal_address        = "172.16.1.0/24"
     }

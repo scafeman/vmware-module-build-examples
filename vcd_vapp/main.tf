@@ -19,5 +19,5 @@ module "vcd_vapp" {
   vdc_org_name        = "1338829-us1-rsvc-developmentenvironment"
   vdc_group_name      = "1338829-us1-rsvc-developmentenvironment datacenter group"
 
-  vapp_names = ["Production Application vApp"]
+  vapp_names = ["My Production Application"]
 }
