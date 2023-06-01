@@ -1,4 +1,4 @@
-# VMware Cloud Director NSX-T Distributed Firewall Terraform Build Example
+# VMware Cloud Director NSX-T Security Group Terraform Build Example
 
 This directory contains an example Terraform configuration that demonstrates how to use the [vcd_nsxt_security_group](https://github.com/global-vmware/vcd_nsxt_security_group) Terraform Module to deploy NSX-T Security Groups into the [Rackspace SDDC Flex](https://www.rackspace.com/cloud/private/software-defined-data-center-flex) VMware Cloud Director Platform.
 

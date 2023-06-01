@@ -1,4 +1,4 @@
-# VMware Cloud Director NSX-T Distributed Firewall Terraform Build Example
+# VMware Cloud Director NSX-T Edge Gateway Firewall Terraform Build Example
 
 This directory contains an example Terraform configuration that demonstrates how to use the [vcd_nsxt_firewall](https://github.com/global-vmware/vcd_nsxt_firewall) Terraform Module to deploy NSX-T Edge Gateway Firewall Rules into the [Rackspace SDDC Flex](https://www.rackspace.com/cloud/private/software-defined-data-center-flex) VMware Cloud Director Platform.
 
