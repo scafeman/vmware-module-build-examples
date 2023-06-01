@@ -70,7 +70,33 @@ module "vcd_vapp_web_vm" {
       is_system   = false
     }
   ]
+
+  disks_per_vm = 2
+  vm_disks = [
+    {
+      name          = "Prod-App-Web01-WebDataDisk01"
+      bus_number    = 1
+      unit_number   = 0
+    },
+    {
+      name          = "Prod-App-Web01-WebLogDisk01"
+      bus_number    = 1
+      unit_number   = 1
+    },
+    {
+      name          = "Prod-App-Web02-WebDataDisk01"
+      bus_number    = 1
+      unit_number   = 0
+    },
+    {
+      name          = "Prod-App-Web02-WebLogDisk01"
+      bus_number    = 1
+      unit_number   = 1
+    }
+  ]
   
+  
+
   network_interfaces                = [
     {
     type                  = "org"
@@ -91,7 +117,7 @@ module "vcd_vapp_web_vm" {
   ]
 
   vm_ips_index_multiplier = 2
-  vm_ips                  = ["172.16.0.10", "172.16.1.10", "172.16.0.11", "172.16.1.11"]
+  vm_ips                  = ["172.16.0.20", "172.16.1.20", "172.16.0.21", "172.16.1.21"]
 }
 
 #########################
@@ -156,6 +182,30 @@ module "vcd_vapp_db_vm" {
       is_system   = false
     }
   ]
+
+  disks_per_vm = 2
+  vm_disks = [
+    {
+      name          = "Prod-App-DB01-SqlDataDisk01"
+      bus_number    = 1
+      unit_number   = 0
+    },
+    {
+      name          = "Prod-App-DB01-SqlLogDisk02"
+      bus_number    = 1
+      unit_number   = 1
+    },
+    {
+      name          = "Prod-App-DB02-SqlDataDisk01"
+      bus_number    = 1
+      unit_number   = 0
+    },
+    {
+      name          = "Prod-App-DB02-SqlLogDisk02"
+      bus_number    = 1
+      unit_number   = 1
+    }
+  ]
   
   network_interfaces                = [
     {
@@ -177,5 +227,5 @@ module "vcd_vapp_db_vm" {
   ]
 
   vm_ips_index_multiplier = 2
-  vm_ips                  = ["172.16.2.10", "172.16.3.10", "172.16.2.11", "172.16.3.11"]
+  vm_ips                  = ["172.16.2.20", "172.16.3.20", "172.16.2.21", "172.16.3.21"]
 }

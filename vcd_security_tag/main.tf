@@ -17,9 +17,11 @@ module "vcd_security_tags" {
   vdc_org_name          = "1338829-us1-rsvc-developmentenvironment"
 
   security_tags = {
-    "pd-wordpress-web"  = ["Prod WordPress Web 01", "Prod WordPress Web 02"]
-    "pd-wordpress-db"   = ["Prod WordPress DB 01", "Prod WordPress DB 02"]
+    "pd-wordpress-web"  = ["Prod WordPress Web 01", "Prod WordPress Web 02"],
+    "pd-wordpress-db"   = ["Prod WordPress DB 01", "Prod WordPress DB 02"],
+    "pd-app-web"        = ["Production App Web Server 01", "Production App Web Server 02"],
+    "pd-app-db"         = ["Production App DB Server 01", "Production App DB Server 02"]
   }
   
-  vm_names              = ["Prod WordPress Web 01", "Prod WordPress Web 02", "Prod WordPress DB 01", "Prod WordPress DB 02"]
+  vm_names              = ["Prod WordPress Web 01","Prod WordPress Web 02", "Prod WordPress DB 01", "Prod WordPress DB 02", "Production App Web Server 01", "Production App Web Server 02", "Production App DB Server 01", "Production App DB Server 02"]
 }

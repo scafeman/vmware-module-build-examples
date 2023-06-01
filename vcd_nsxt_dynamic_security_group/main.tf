@@ -37,6 +37,27 @@ module "vcd_nsxt_dynamic_security_group" {
           value    = "WordPress DB"
         }
       ]
+    },
+    Prod-App-Web_Dynamic-SG = {
+      description = "Production App Web Servers Dynamic Security Group"
+      criteria    = [
+        {
+          type     = "VM_TAG"
+          operator = "EQUALS"
+          value    = "pd-app-web"
+        }
+      ]
+    },
+    Prod-App-DB_Dynamic-SG = {
+      description = "Production App Database Servers Dynamic Security Group"
+      criteria    = [
+        {
+          type     = "VM_TAG"
+          operator = "EQUALS"
+          value    = "pd-app-db"
+        }
+      ]
     }
   }
+  
 }

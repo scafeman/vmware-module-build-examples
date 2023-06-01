@@ -1,0 +1,5 @@
+vcd_user            = "rsvcdemo.admin"
+vcd_pass            = "4R4ckAdm1n!"
+vcd_url             = "https://us1.rsvc.rackspace.com/api"
+vdc_org_name        = "1338829-us1-rsvc-developmentenvironment"
+vdc_name            = "1338829-us1-default-primary-vdc"

@@ -1,0 +1,1 @@
+{"Modules":[{"Key":"","Source":"","Dir":"."},{"Key":"vcd_nsxt_distributed_firewall","Source":"git::https://github.com/global-vmware/vcd_nsxt_distributed_firewall.git?ref=v1.1.0","Dir":".terraform/modules/vcd_nsxt_distributed_firewall"}]}
