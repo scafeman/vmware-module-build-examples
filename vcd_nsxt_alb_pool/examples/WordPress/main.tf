@@ -29,7 +29,7 @@ module "vcd_nsxt_alb_pool" {
 
   persistence_profile = [
     {
-      type  = "TLS"
+      type  = "CLIENT_IP"
       value = ""
     }
   ]
