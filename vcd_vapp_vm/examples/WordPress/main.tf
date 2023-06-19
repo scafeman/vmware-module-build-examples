@@ -21,7 +21,7 @@ module "vcd_vapp_web_vm" {
   vdc_edge_name                     = "1338829-US1-18916d0c-4c6d-42c3-be95-b911ee2119fb-edge"
 
   catalog_name                      = "1338829-US1-catalog"
-  catalog_template_name             = "Ubuntu 22.04-Template-v1.0"
+  catalog_template_name             = "WordPress-Dev-Web-Template-v1.0"
 
   vm_sizing_policy_name             = "gp4.8"
   vm_min_cpu                        = "4"
